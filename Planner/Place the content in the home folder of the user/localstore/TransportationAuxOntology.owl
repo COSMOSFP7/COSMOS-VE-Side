@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY MasterOnt "http://www.COSMOS.ntua.gr/MasterOnt#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY hasTrust "http://www.COSMOS.ntua.gr/MasterOnt#hasTrust&amp;" >
+    <!ENTITY TransportationAuxOntology "http://www.COSMOS.ntua.gr/TransportationAuxOntology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.COSMOS.ntua.gr/MasterOnt#"
+     xml:base="http://www.COSMOS.ntua.gr/MasterOnt"
+     xmlns:TransportationAuxOntology="http://www.COSMOS.ntua.gr/TransportationAuxOntology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:MasterOnt="http://www.COSMOS.ntua.gr/MasterOnt#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:hasTrust="&MasterOnt;hasTrust&amp;">
+    <owl:Ontology rdf:about="http://www.COSMOS.ntua.gr/TransportationAuxOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#createAlert -->
+
+    <owl:ObjectProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#createAlert"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices -->
+
+    <owl:ObjectProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName -->
+
+    <owl:ObjectProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDataType"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasGeoLat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasGeoLat">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasGeoLon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasGeoLon">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Every VE must have a unique Id</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Location can be either mobile or fixed</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>fixed</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>mobile</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasMethod"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasName"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasOxygenCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasOxygenCount">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasSmokeCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasSmokeCount">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTemp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isDomainType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isDomainType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#BusStop -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#BusStop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">fixed</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">BusStop</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#LineComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Busses -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Busses">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">mobile</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">bus</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Vehicles"/>
+        <owl:disjointWith rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Cars"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Cars -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Cars">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">mobile</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">car</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Vehicles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#HQ -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#HQ">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">fixed</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">HQ</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#LineComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#LineComponents -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#LineComponents">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">fixed</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#VirtualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#TrafficLights -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#TrafficLights">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">fixed</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">TrafficLight</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#LineComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Vehicles -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Vehicles">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasLocation"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">mobile</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasId"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#VirtualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#VirtualEntity -->
+
+    <owl:Class rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#VirtualEntity"/>
+    <rdf:Description>
+        <rdfs:comment>
+            <rdf:Description/>
+        </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>
+            <rdf:Description/>
+        </rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#BusStop"/>
+            <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#HQ"/>
+            <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#TrafficLights"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

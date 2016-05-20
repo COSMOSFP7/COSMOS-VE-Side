@@ -1,0 +1,1 @@
+{"type":"Temperature","state":"19.90625","ts":"1446619783","tf":"08:49:43","sid":"131074","hid":"cI7I8CE5IYRQ"}

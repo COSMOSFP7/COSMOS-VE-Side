@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY social "http://www.cosmos.ontology.com/social#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.cosmos.ontology.com/social#"
+     xml:base="http://www.cosmos.ontology.com/social"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:social="http://www.cosmos.ontology.com/social#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.cosmos.ontology.com/social"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="&social;hasAddress">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#hasID -->
+
+    <owl:DatatypeProperty rdf:about="&social;hasID">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#hasReliabilityIndex -->
+
+    <owl:DatatypeProperty rdf:about="&social;hasReliabilityIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#hasReputationIndex -->
+
+    <owl:DatatypeProperty rdf:about="&social;hasReputationIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#hasTrustIndex -->
+
+    <owl:DatatypeProperty rdf:about="&social;hasTrustIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#isPhysicalEntity -->
+
+    <owl:DatatypeProperty rdf:about="&social;isPhysicalEntity">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat1 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat1">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">28</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">42</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID7566*&amp;$%</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3030</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat10 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat10">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">325</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">800</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0007!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3038</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat11 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat11">
+        <hasTrustIndex rdf:datatype="&xsd;string">0</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">1</hasReputationIndex>
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0008!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3039</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat12 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat12">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">10</hasReputationIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">8</hasTrustIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0009!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3040</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat13 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat13">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">34</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">50</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0010!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3041</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat14 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat14">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">239</hasReputationIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">66</hasTrustIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0011!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3042</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat15 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat15">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasAddress rdf:datatype="&xsd;string">127.0.0.1:3031</hasAddress>
+        <hasTrustIndex rdf:datatype="&xsd;string">7</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">7</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID8769@$%#</hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat2 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat2">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">310</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">380</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID4234!@$%</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:8080</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat3 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat3">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">100</hasTrustIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">200</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID8999@$%#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:5050</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat4 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat4">
+        <hasTrustIndex rdf:datatype="&xsd;string">0</hasTrustIndex>
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">23</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0001!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3032</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat5 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat5">
+        <hasTrustIndex rdf:datatype="&xsd;string">0</hasTrustIndex>
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">53</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0002!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3033</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat6 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat6">
+        <hasTrustIndex rdf:datatype="&xsd;string">0</hasTrustIndex>
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">3</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0003!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3034</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat7 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat7">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">158</hasReputationIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">26</hasTrustIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0004!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3035</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat8 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat8">
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">1200</hasReputationIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">89</hasTrustIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0005!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3036</hasAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cosmos.ontology.com/social#Flat9 -->
+
+    <owl:NamedIndividual rdf:about="&social;Flat9">
+        <hasTrustIndex rdf:datatype="&xsd;string">1</hasTrustIndex>
+        <hasReliabilityIndex rdf:datatype="&xsd;string">1.0</hasReliabilityIndex>
+        <hasReputationIndex rdf:datatype="&xsd;string">3</hasReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID0006!!@#</hasID>
+        <hasAddress rdf:datatype="&xsd;string">localhost:3037</hasAddress>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

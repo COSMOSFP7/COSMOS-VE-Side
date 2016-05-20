@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY FriendOntology "http://www.localstore.friends.com/FriendOntology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.localstore.friends.com/FriendOntology#"
+     xml:base="http://www.localstore.friends.com/FriendOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:FriendOntology="http://www.localstore.friends.com/FriendOntology#">
+    <owl:Ontology rdf:about="http://www.localstore.friends.com/FriendOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasFollowee -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasFollowee">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasFollower -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasFollower"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasApplause -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasApplause">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasApplauseEval0 -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasApplauseEval0"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasApplauseTime0 -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasApplauseTime0"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasApplausesForAssists -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasApplausesForAssists"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasApplausesForShares -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasApplausesForShares"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasAssist -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasAssist">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasDependabilityIndex -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasDependabilityIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasID -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasID">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasLastTimeRequest -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasLastTimeRequest">
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasMaxTTL -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasMaxTTL"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasMinInterval -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasMinInterval">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasReputationIndex -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasReputationIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRequestKeyAsFollowee -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRequestKeyAsFollowee">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRequestKeyAsFollower -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRequestKeyAsFollower">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasResponseKeyAsFollowee -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasResponseKeyAsFollowee">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasResponseKeyAsFollower -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasResponseKeyAsFollower">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasShare -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasShare">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasTrustIndex -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasTrustIndex">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasVirtualIPAddress -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasVirtualIPAddress">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#isPhysicalEntity -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;isPhysicalEntity">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#ExperienceSharing -->
+
+    <owl:Class rdf:about="&FriendOntology;ExperienceSharing">
+        <rdfs:subClassOf rdf:resource="&FriendOntology;FriendLists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#FriendLists -->
+
+    <owl:Class rdf:about="&FriendOntology;FriendLists"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#NotifyHeating -->
+
+    <owl:Class rdf:about="&FriendOntology;NotifyHeating">
+        <rdfs:subClassOf rdf:resource="&FriendOntology;ExperienceSharing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Owner -->
+
+    <owl:Class rdf:about="&FriendOntology;Owner"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#ReplacementFollowees -->
+
+    <owl:Class rdf:about="&FriendOntology;ReplacementFollowees">
+        <rdfs:subClassOf rdf:resource="&FriendOntology;FriendLists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#ReplacementIoTServices -->
+
+    <owl:Class rdf:about="&FriendOntology;ReplacementIoTServices">
+        <rdfs:subClassOf rdf:resource="&FriendOntology;FriendLists"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat1 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat1">
+        <rdf:type rdf:resource="&FriendOntology;Owner"/>
+        <hasReputationIndex rdf:datatype="&xsd;string">0</hasReputationIndex>
+        <hasTrustIndex rdf:datatype="&xsd;string">1</hasTrustIndex>
+        <hasMaxTTL rdf:datatype="&xsd;int">7</hasMaxTTL>
+        <hasID rdf:datatype="&xsd;string">UUID7566*&amp;$%</hasID>
+        <isPhysicalEntity rdf:datatype="&xsd;string">flat</isPhysicalEntity>
+        <hasVirtualIPAddress rdf:datatype="&xsd;string">localhost:3030</hasVirtualIPAddress>
+        <hasMinInterval>1</hasMinInterval>
+        <hasFollowee rdf:resource="&FriendOntology;Flat12"/>
+        <hasFollowee rdf:resource="&FriendOntology;Flat15"/>
+        <hasFollowee rdf:resource="&FriendOntology;Flat2"/>
+        <hasFollower rdf:resource="&FriendOntology;Flat20"/>
+        <hasFollower rdf:resource="&FriendOntology;Flat3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat12 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat12">
+        <rdf:type rdf:resource="&FriendOntology;NotifyHeating"/>
+        <hasID>UUID0009!!@#</hasID>
+        <hasDependabilityIndex>0.9</hasDependabilityIndex>
+        <hasVirtualIPAddress>localhost:3040</hasVirtualIPAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat15 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat15">
+        <rdf:type rdf:resource="&FriendOntology;NotifyHeating"/>
+        <hasLastTimeRequest rdf:datatype="&xsd;long">1433845488127</hasLastTimeRequest>
+        <hasRequestKeyAsFollower>testingkey</hasRequestKeyAsFollower>
+        <hasResponseKeyAsFollower>testingkey</hasResponseKeyAsFollower>
+        <hasVirtualIPAddress>127.0.0.1:3031</hasVirtualIPAddress>
+        <hasID>UUID8769@$%#</hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat2 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat2">
+        <rdf:type rdf:resource="&FriendOntology;NotifyHeating"/>
+        <hasAssist>1</hasAssist>
+        <hasApplause>-4</hasApplause>
+        <hasVirtualIPAddress>37.48.76.243:8080</hasVirtualIPAddress>
+        <hasShare>6</hasShare>
+        <hasID>UUID4234!@$%</hasID>
+        <hasResponseKeyAsFollowee>response</hasResponseKeyAsFollowee>
+        <hasDependabilityIndex>0.9078947368421053</hasDependabilityIndex>
+        <hasRequestKeyAsFollowee>request</hasRequestKeyAsFollowee>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat20 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat20">
+        <rdf:type rdf:resource="&FriendOntology;NotifyHeating"/>
+        <hasVirtualIPAddress rdf:datatype="&xsd;string">0:0:0:0:0:0:0:1:64986</hasVirtualIPAddress>
+        <hasLastTimeRequest rdf:datatype="&xsd;long">1444308637595</hasLastTimeRequest>
+        <hasRequestKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasRequestKeyAsFollower>
+        <hasResponseKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasResponseKeyAsFollower>
+        <hasID>UUID8770@$%#</hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat3 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat3">
+        <rdf:type rdf:resource="&FriendOntology;NotifyHeating"/>
+        <hasLastTimeRequest rdf:datatype="&xsd;long">1444308637595</hasLastTimeRequest>
+        <hasVirtualIPAddress rdf:datatype="&xsd;string">147.102.19.175:5050</hasVirtualIPAddress>
+        <hasID rdf:datatype="&xsd;string">UUID8999@$%#</hasID>
+        <hasRequestKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasRequestKeyAsFollower>
+        <hasResponseKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasResponseKeyAsFollower>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

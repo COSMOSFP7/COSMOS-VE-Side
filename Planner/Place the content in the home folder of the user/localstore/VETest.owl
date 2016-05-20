@@ -1,0 +1,100 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:MasterCOSMOSOnt="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#"
+    xmlns:MasterOnt="http://www.COSMOS.ntua.gr/MasterOnt#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem3">
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</MasterCOSMOSOnt:hasCaseType>
+    <MasterCOSMOSOnt:hasRoomTempBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</MasterCOSMOSOnt:hasRoomTempBefore>
+    <MasterCOSMOSOnt:timeElapsed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3304</MasterCOSMOSOnt:timeElapsed>
+    <MasterCOSMOSOnt:hasRoomTempAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</MasterCOSMOSOnt:hasRoomTempAfter>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem4">
+    <MasterCOSMOSOnt:hasRoomTempAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</MasterCOSMOSOnt:hasRoomTempAfter>
+    <MasterCOSMOSOnt:timeElapsed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2690</MasterCOSMOSOnt:timeElapsed>
+    <MasterCOSMOSOnt:hasRoomTempBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</MasterCOSMOSOnt:hasRoomTempBefore>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem1">
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solution</MasterCOSMOSOnt:hasCaseType>
+    <MasterCOSMOSOnt:boilerTemp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">76</MasterCOSMOSOnt:boilerTemp>
+    <MasterCOSMOSOnt:solves rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem2">
+    <MasterCOSMOSOnt:solves rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem2"/>
+    <MasterCOSMOSOnt:boilerTemp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">41</MasterCOSMOSOnt:boilerTemp>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solution</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasCaseType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem3">
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solution</MasterCOSMOSOnt:hasCaseType>
+    <MasterCOSMOSOnt:boilerTemp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</MasterCOSMOSOnt:boilerTemp>
+    <MasterCOSMOSOnt:solves rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem4">
+    <MasterCOSMOSOnt:solves rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem4"/>
+    <MasterCOSMOSOnt:boilerTemp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</MasterCOSMOSOnt:boilerTemp>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solution</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#boilerTemp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasRoomTempAfter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#includesInCaseBase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#Flat1">
+    <MasterCOSMOSOnt:isPhysicalEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flat</MasterCOSMOSOnt:isPhysicalEntity>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem1"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem1"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem2"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem0"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem0"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem4"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem3"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem4"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem2"/>
+    <MasterCOSMOSOnt:includesInCaseBase rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#timeElapsed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#isPhysicalEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solution_of_problem0">
+    <MasterCOSMOSOnt:solves rdf:resource="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem0"/>
+    <MasterCOSMOSOnt:boilerTemp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</MasterCOSMOSOnt:boilerTemp>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solution</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem0">
+    <MasterCOSMOSOnt:hasRoomTempAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</MasterCOSMOSOnt:hasRoomTempAfter>
+    <MasterCOSMOSOnt:timeElapsed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2153</MasterCOSMOSOnt:timeElapsed>
+    <MasterCOSMOSOnt:hasRoomTempBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</MasterCOSMOSOnt:hasRoomTempBefore>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem1">
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</MasterCOSMOSOnt:hasCaseType>
+    <MasterCOSMOSOnt:hasRoomTempBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</MasterCOSMOSOnt:hasRoomTempBefore>
+    <MasterCOSMOSOnt:timeElapsed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2883</MasterCOSMOSOnt:timeElapsed>
+    <MasterCOSMOSOnt:hasRoomTempAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</MasterCOSMOSOnt:hasRoomTempAfter>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#solves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#problem2">
+    <MasterCOSMOSOnt:hasRoomTempAfter rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</MasterCOSMOSOnt:hasRoomTempAfter>
+    <MasterCOSMOSOnt:timeElapsed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2369</MasterCOSMOSOnt:timeElapsed>
+    <MasterCOSMOSOnt:hasRoomTempBefore rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</MasterCOSMOSOnt:hasRoomTempBefore>
+    <MasterCOSMOSOnt:hasCaseType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem</MasterCOSMOSOnt:hasCaseType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#hasRoomTempBefore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

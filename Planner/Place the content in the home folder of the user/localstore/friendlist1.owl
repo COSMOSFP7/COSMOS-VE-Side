@@ -1,0 +1,923 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY MasterOnt "http://www.COSMOS.ntua.gr/MasterOnt#" >
+    <!ENTITY MasterOntt "http://www.COSMOS.ntua.gr/MasterOntt#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY MasterCOSMOSOnt2 "http://www.cosmos.ntua.gr/MasterCOSMOSOnt#" >
+    <!ENTITY MasterCOSMOSOnt "http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY hasTrust "http://www.COSMOS.ntua.gr/MasterOnt#hasTrust&amp;" >
+    <!ENTITY FriendOntology "http://www.localstore.friends.com/FriendOntology#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.localstore.friends.com/FriendOntology#"
+     xml:base="http://www.localstore.friends.com/FriendOntology"
+     xmlns:MasterCOSMOSOnt="http://www.COSMOS.ntua.gr/MasterCOSMOSOnt#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:MasterOntt="http://www.COSMOS.ntua.gr/MasterOntt#"
+     xmlns:MasterOnt="http://www.COSMOS.ntua.gr/MasterOnt#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:FriendOntology="http://www.localstore.friends.com/FriendOntology#"
+     xmlns:MasterCOSMOSOnt2="http://www.cosmos.ntua.gr/MasterCOSMOSOnt#"
+     xmlns:hasTrust="&MasterOnt;hasTrust&amp;">
+    <owl:Ontology rdf:about="http://www.localstore.friends.com/FriendOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#createAlert -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;createAlert"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#exposesServices -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;exposesServices"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasDomainName -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasDomainName">
+        <rdfs:comment>Every VE must subscribe to one domain at least</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasFollowee -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasFollowee"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasFollower -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasFollower"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasFriend">
+        <rdfs:comment>Friendship must be defined</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasOwner">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&FriendOntology;hasFriend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRESTParameter -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasRESTParameter">
+        <rdfs:comment>Domain is RESTComponent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&FriendOntology;hasServiceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRESTResponce -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasRESTResponce">
+        <rdfs:comment>Domain is RESTComponent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&FriendOntology;hasServiceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasServiceParameter -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;hasServiceParameter">
+        <rdfs:comment>Indicating an abstraction of Service Parameters, although all of them will be of REST type.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#includesInCaseBase -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;includesInCaseBase">
+        <rdfs:comment>A relationship between VE&apos;s and problems indicating that a VE recognises a set of conditions as a problem.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&FriendOntology;isIncludedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#isIncludedBy -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;isIncludedBy"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#isSolvedBy -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;isSolvedBy"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#solves -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;solves">
+        <owl:inverseOf rdf:resource="&FriendOntology;isSolvedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#usesComponent -->
+
+    <owl:ObjectProperty rdf:about="&FriendOntology;usesComponent">
+        <rdfs:comment>This property connects an IoTService with its RESTComponent.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#URI -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;URI">
+        <rdfs:comment>General Property for URI. Use when needed.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#accessURI -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;accessURI">
+        <rdfs:comment>Domain is RESTComponent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&FriendOntology;URI"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#boilerTemp -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;boilerTemp"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#exposesMessage -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;exposesMessage">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasAddress">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasCaseType -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasCaseType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>problem</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>solution</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasDataType -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasDataType">
+        <rdfs:comment>Domain is ServiceParameter.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasDependabilityIndex -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasDependabilityIndex"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasGeoLat -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasGeoLat">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasGeoLon -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasGeoLon">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasID -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Every VE must have a unique Id</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasLastTimeRequest -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasLastTimeRequest"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasLocation">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasMaxTTL -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasMaxTTL"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasMethod">
+        <rdfs:comment>Domain is RESTComponent.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasMinInterval -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasMinInterval"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasName">
+        <rdfs:comment>Domain is ServiceParameter.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRESTComponentName -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRESTComponentName">
+        <rdfs:comment>Domain is RESTComponent.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRESTDesignation -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRESTDesignation">
+        <rdfs:comment>Must be defined as either REST input or output for inference.</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>input</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>output</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRequestKeyAsFollower -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRequestKeyAsFollower"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasResponseKeyAsFollower -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasResponseKeyAsFollower"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRoomTempAfter -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRoomTempAfter"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasRoomTempBefore -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasRoomTempBefore"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasSemanticType -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasSemanticType">
+        <rdfs:comment>Domain is ServiceParameter.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasServiceType -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasServiceType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>IoT</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>Regular</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasTrustAndReputationIndex -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasTrustAndReputationIndex">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#hasVirtualIPAddress -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;hasVirtualIPAddress"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#isDomainType -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;isDomainType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#isPhysicalEntity -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;isPhysicalEntity">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#remoteDomainURI -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;remoteDomainURI">
+        <rdfs:subPropertyOf rdf:resource="&FriendOntology;URI"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#timeElapsed -->
+
+    <owl:DatatypeProperty rdf:about="&FriendOntology;timeElapsed"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Cases -->
+
+    <owl:Class rdf:about="&FriendOntology;Cases">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FriendOntology;hasCaseType"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;Experience"/>
+        <owl:disjointWith rdf:resource="&FriendOntology;Models"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#DomainName -->
+
+    <owl:Class rdf:about="&FriendOntology;DomainName">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FriendOntology;isDomainType"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Experience -->
+
+    <owl:Class rdf:about="&FriendOntology;Experience">
+        <rdfs:comment>Two kinds (classes) of experience have been defined so far: cases (plans) which refer to Planning (P) from MAPE loop and models which refer to Analyze (A) from MAPE loop</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#ExposedServices -->
+
+    <owl:Class rdf:about="&FriendOntology;ExposedServices">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&FriendOntology;usesComponent"/>
+                                <owl:someValuesFrom rdf:resource="&FriendOntology;RESTComponent"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&FriendOntology;hasServiceType"/>
+                                <owl:someValuesFrom rdf:resource="&xsd;Name"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasServiceType"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">Regular</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#IoTServices -->
+
+    <owl:Class rdf:about="&FriendOntology;IoTServices">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;usesComponent"/>
+                        <owl:someValuesFrom rdf:resource="&FriendOntology;RESTComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasServiceType"/>
+                        <owl:hasValue rdf:datatype="&xsd;Name">IoT</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;ExposedServices"/>
+        <owl:disjointWith rdf:resource="&FriendOntology;Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Models -->
+
+    <owl:Class rdf:about="&FriendOntology;Models">
+        <rdfs:subClassOf rdf:resource="&FriendOntology;Experience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Problems -->
+
+    <owl:Class rdf:about="&FriendOntology;Problems">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FriendOntology;hasCaseType"/>
+                <owl:hasValue rdf:datatype="&xsd;string">problem</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;Cases"/>
+        <owl:disjointWith rdf:resource="&FriendOntology;Solutions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#REST -->
+
+    <owl:Class rdf:about="&FriendOntology;REST"/>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTComponent -->
+
+    <owl:Class rdf:about="&FriendOntology;RESTComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasRESTParameter"/>
+                        <owl:someValuesFrom rdf:resource="&FriendOntology;RESTParameter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasRESTResponce"/>
+                        <owl:someValuesFrom rdf:resource="&FriendOntology;RESTResponce"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;accessURI"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasMethod"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasRESTComponentName"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;REST"/>
+        <owl:disjointWith rdf:resource="&FriendOntology;ServiceParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTParameter -->
+
+    <owl:Class rdf:about="&FriendOntology;RESTParameter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasDataType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasName"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasSemanticType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasRESTDesignation"/>
+                        <owl:hasValue>input</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;ServiceParameter"/>
+        <owl:disjointWith rdf:resource="&FriendOntology;RESTResponce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTResponce -->
+
+    <owl:Class rdf:about="&FriendOntology;RESTResponce">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasDataType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasName"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasSemanticType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasRESTDesignation"/>
+                        <owl:hasValue>output</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;ServiceParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#ServiceParameter -->
+
+    <owl:Class rdf:about="&FriendOntology;ServiceParameter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasDataType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasName"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasSemanticType"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;REST"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Services -->
+
+    <owl:Class rdf:about="&FriendOntology;Services">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FriendOntology;hasServiceType"/>
+                <owl:hasValue rdf:datatype="&xsd;Name">Regular</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;ExposedServices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Solutions -->
+
+    <owl:Class rdf:about="&FriendOntology;Solutions">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FriendOntology;hasCaseType"/>
+                <owl:hasValue rdf:datatype="&xsd;string">solution</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&FriendOntology;Cases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#VirtualEntity -->
+
+    <owl:Class rdf:about="&FriendOntology;VirtualEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;exposesServices"/>
+                        <owl:someValuesFrom rdf:resource="&FriendOntology;IoTServices"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasDomainName"/>
+                        <owl:someValuesFrom rdf:resource="&FriendOntology;DomainName"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasID"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&FriendOntology;hasTrustAndReputationIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#DummyMobileService -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;DummyMobileService">
+        <hasServiceType rdf:datatype="&xsd;string">IoT</hasServiceType>
+        <usesComponent rdf:resource="&FriendOntology;RESTComp1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat1 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat1">
+        <hasTrustAndReputationIndex rdf:datatype="&xsd;integer">0</hasTrustAndReputationIndex>
+        <hasID rdf:datatype="&xsd;string">UUID7566*&amp;$%</hasID>
+        <isPhysicalEntity rdf:datatype="&xsd;string">flat</isPhysicalEntity>
+        <hasVirtualIPAddress>147.102.19.165:3030</hasVirtualIPAddress>
+        <hasDependabilityIndex>1.0</hasDependabilityIndex>
+        <hasOwner rdf:resource="&FriendOntology;Mobile1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat2 -->
+
+    <owl:Thing rdf:about="&FriendOntology;Flat2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasLastTimeRequest rdf:datatype="&xsd;long">1446563051768</hasLastTimeRequest>
+        <hasRequestKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasRequestKeyAsFollower>
+        <hasResponseKeyAsFollower rdf:datatype="&xsd;string">testingkey</hasResponseKeyAsFollower>
+        <hasVirtualIPAddress>37.48.76.243:8080</hasVirtualIPAddress>
+        <hasID>UUID32423_54</hasID>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Flat3 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Flat3">
+        <hasMaxTTL rdf:datatype="&xsd;int">7</hasMaxTTL>
+        <hasID rdf:datatype="&xsd;string">UUID8999@$%#</hasID>
+        <isPhysicalEntity rdf:datatype="&xsd;string">flat</isPhysicalEntity>
+        <hasVirtualIPAddress>localhost:5050</hasVirtualIPAddress>
+        <hasMinInterval>1</hasMinInterval>
+        <hasFollowee rdf:resource="&FriendOntology;Flat1"/>
+        <hasFollower rdf:resource="&FriendOntology;Flat2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#Mobile1 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;Mobile1">
+        <hasAddress rdf:datatype="&xsd;string"></hasAddress>
+        <hasGeoLat rdf:datatype="&xsd;string">-15.27</hasGeoLat>
+        <hasTrustAndReputationIndex rdf:datatype="&xsd;int">0</hasTrustAndReputationIndex>
+        <hasGeoLon rdf:datatype="&xsd;string">38.52</hasGeoLon>
+        <hasID rdf:datatype="&xsd;string">UUID24234234www#$%</hasID>
+        <isPhysicalEntity rdf:datatype="&xsd;string">mobile_phone</isPhysicalEntity>
+        <hasLocation>mobile</hasLocation>
+        <exposesServices rdf:resource="&FriendOntology;DummyMobileService"/>
+        <hasFriend rdf:resource="&FriendOntology;Flat1"/>
+        <hasDomainName rdf:resource="&FriendOntology;dummymobiledomain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTComp1 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;RESTComp1">
+        <hasMethod rdf:datatype="&xsd;string">POST</hasMethod>
+        <hasRESTComponentName rdf:datatype="&xsd;string">Request Experience</hasRESTComponentName>
+        <accessURI rdf:datatype="&xsd;anyURI">localhost:3030/request/experience</accessURI>
+        <hasRESTParameter rdf:resource="&FriendOntology;RESTParam_for_1_a"/>
+        <hasRESTParameter rdf:resource="&FriendOntology;RESTParam_for_1_b"/>
+        <hasRESTParameter rdf:resource="&FriendOntology;RESTParam_for_1_c"/>
+        <hasRESTResponce rdf:resource="&FriendOntology;RESTResponce_for_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTParam_for_1_a -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;RESTParam_for_1_a">
+        <hasName rdf:datatype="&xsd;string">beforeTemp</hasName>
+        <hasRESTDesignation rdf:datatype="&xsd;string">input</hasRESTDesignation>
+        <hasDataType rdf:datatype="&xsd;string">integer</hasDataType>
+        <hasSemanticType rdf:datatype="&xsd;anyURI">localhost:3030/room1/sensor/temp</hasSemanticType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTParam_for_1_b -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;RESTParam_for_1_b">
+        <hasName rdf:datatype="&xsd;string">afterTemp</hasName>
+        <hasRESTDesignation rdf:datatype="&xsd;string">input</hasRESTDesignation>
+        <hasDataType rdf:datatype="&xsd;string">integer</hasDataType>
+        <hasSemanticType rdf:datatype="&xsd;anyURI">localhost:3030/room1/sensor/temp</hasSemanticType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTParam_for_1_c -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;RESTParam_for_1_c">
+        <hasRESTDesignation rdf:datatype="&xsd;string">input</hasRESTDesignation>
+        <hasDataType rdf:datatype="&xsd;string">integer</hasDataType>
+        <hasSemanticType rdf:datatype="&xsd;anyURI">localhost:3030/localfunctions/ticker</hasSemanticType>
+        <hasName rdf:datatype="&xsd;string">timeElapsed</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#RESTResponce_for_1 -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;RESTResponce_for_1">
+        <hasName rdf:datatype="&xsd;string">boilerTemp</hasName>
+        <hasDataType rdf:datatype="&xsd;string">integer</hasDataType>
+        <hasSemanticType rdf:datatype="&xsd;anyURI">localhost:3030/room1/actuator/boiler</hasSemanticType>
+        <hasRESTDesignation rdf:datatype="&xsd;string">output</hasRESTDesignation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.friends.com/FriendOntology#dummymobiledomain -->
+
+    <owl:NamedIndividual rdf:about="&FriendOntology;dummymobiledomain">
+        <isDomainType rdf:datatype="&xsd;boolean">true</isDomainType>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment>
+            <rdf:Description/>
+        </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>
+            <rdf:Description/>
+        </rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

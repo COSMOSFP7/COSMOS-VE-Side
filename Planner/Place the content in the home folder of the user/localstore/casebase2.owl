@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY MasterCOSMOSOnt "http://www.cosmos.ntua.gr/MasterCOSMOSOnt#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.localstore.casebase.com/CaseBaseOntology#"
+     xml:base="http://www.localstore.casebase.com/CaseBaseOntology"
+     xmlns:MasterCOSMOSOnt="http://www.cosmos.ntua.gr/MasterCOSMOSOnt#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.localstore.casebase.com/CaseBaseOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#includesInCaseBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#includesInCaseBase">
+        <owl:inverseOf rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#isIncludedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#isIncludedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#isIncludedBy"/>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#isSolvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#isSolvedBy">
+        <owl:inverseOf rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#solves"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#solves -->
+
+    <owl:ObjectProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#solves"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#URI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#URI">
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#boilerTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#boilerTemp">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#exposesMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#exposesMessage">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasCaseType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasCaseType">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasConsumption"/>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasFlowTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasFlowTemp">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasReturnTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasReturnTemp">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasRoomTempAfter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasRoomTempAfter">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasRoomTempBefore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasRoomTempBefore">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasTdes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasTdes"/>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasTin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasTin"/>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#hasTout -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#hasTout"/>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#isShareable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#isShareable">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#timeElapsed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#timeElapsed">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#Cases -->
+
+    <owl:Class rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#Cases">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#hasCaseType"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#Problem -->
+
+    <owl:Class rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#Problem">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#hasCaseType"/>
+                <owl:hasValue rdf:datatype="&xsd;string">problem</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#Cases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#Solution -->
+
+    <owl:Class rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#Solution">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#hasCaseType"/>
+                <owl:hasValue rdf:datatype="&xsd;string">solution</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#Cases"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#Flat2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#Flat2">
+        <includesInCaseBase rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#problem0"/>
+        <includesInCaseBase rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#problem1"/>
+        <includesInCaseBase rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem0"/>
+        <includesInCaseBase rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#problem0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#problem0">
+        <timeElapsed rdf:datatype="&xsd;string">1800</timeElapsed>
+        <hasRoomTempAfter rdf:datatype="&xsd;string">26</hasRoomTempAfter>
+        <hasRoomTempBefore rdf:datatype="&xsd;string">5</hasRoomTempBefore>
+        <hasCaseType rdf:datatype="&xsd;string">problem</hasCaseType>
+        <isShareable rdf:datatype="&xsd;boolean">true</isShareable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#problem1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#problem1">
+        <hasCaseType rdf:datatype="&xsd;string">problem</hasCaseType>
+        <isShareable rdf:datatype="&xsd;boolean">true</isShareable>
+        <hasTin>25</hasTin>
+        <hasTdes>15</hasTdes>
+        <hasTout>-3</hasTout>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem0">
+        <exposesMessage rdf:datatype="&xsd;string"></exposesMessage>
+        <boilerTemp rdf:datatype="&xsd;string">54</boilerTemp>
+        <URI rdf:datatype="&xsd;anyURI">blah/setthermostat/temperature</URI>
+        <hasCaseType rdf:datatype="&xsd;string">solution</hasCaseType>
+        <solves rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#problem0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.localstore.casebase.com/CaseBaseOntology#solution_of_problem1">
+        <exposesMessage rdf:datatype="&xsd;string"></exposesMessage>
+        <hasConsumption rdf:datatype="&xsd;string">1</hasConsumption>
+        <URI rdf:datatype="&xsd;anyURI">blah/setflow&amp;flow=off</URI>
+        <hasCaseType rdf:datatype="&xsd;string">solution</hasCaseType>
+        <solves rdf:resource="http://www.localstore.casebase.com/CaseBaseOntology#problem1"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="http://www.COSMOS.ntua.gr/HomeAutomationAuxOntology" uri="HomeAutomationAuxOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.cosmos.ntua.gr/MasterCOSMOSOnt" uri="casebase1.old.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.cosmos.ntua.gr/MasterCOSMOSOnt" uri="casebase1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.cosmos.ntua.gr/MasterCOSMOSOnt" uri="VE.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.cosmos.ntua.gr/MasterCOSMOSOnt" uri="VE1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.COSMOS.ntua.gr/MasterOnt" uri="TransportationAuxOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.COSMOS.ntua.gr/MasterOnt" uri="VE2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="http://www.cosmos.ontology.com/social" uri="CosmosSocial.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.casebase.com/CaseBaseOntology" uri="casebase.original.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.casebase.com/CaseBaseOntology" uri="casebase.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.casebase.com/CaseBaseOntology" uri="casebase2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.friends.com/FriendOntology" uri="friendlist.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.friends.com/FriendOntology" uri="friendlist1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1453979780684" name="duplicate:http://www.localstore.friends.com/FriendOntology" uri="friendlist2.owl"/>
+    </group>
+</catalog>
