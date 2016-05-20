@@ -1,0 +1,15 @@
+{  
+   "estate":"ntua",
+   "hid":"ntua",
+   "ts":1463491396,
+   "sensors":[  
+      {  
+         "sid":"111",
+         "ts":"1463491395",
+         "type":"Temperature",
+         "state":"23.001"
+      }
+   ]
+}
+
+
